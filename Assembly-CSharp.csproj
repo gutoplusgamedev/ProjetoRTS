@@ -48,12 +48,17 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\BaseUnit.cs" />
      <Compile Include="Assets\Scripts\CameraControl.cs" />
+     <Compile Include="Assets\Scripts\EntityProperties.cs" />
      <Compile Include="Assets\Scripts\MobileUnit.cs" />
+     <Compile Include="Assets\Scripts\Objects\ResourceSet.cs" />
+     <Compile Include="Assets\Scripts\Objects\StaticEntityProperties.cs" />
      <Compile Include="Assets\Scripts\Objects\UnitProperties.cs" />
      <Compile Include="Assets\Scripts\ResourceRoot.cs" />
      <Compile Include="Assets\Scripts\UnitController.cs" />
+     <Compile Include="Assets\Scripts\XMLParser.cs" />
      <None Include="Assets\Standard Assets\Projectors\Sources\Shaders\Projector Light.shader" />
      <None Include="Assets\Standard Assets\Projectors\Sources\Shaders\Projector Multiply.shader" />
+     <None Include="Assets\XML\BuildingsInfo.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

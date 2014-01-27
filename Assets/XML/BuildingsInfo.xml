@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<buildings>
+	<building>
+		<id>0</id>
+		<name>Tower</name>
+		<resources food="0" wood="400" gold="100"></resources>
+		<description></description>
+		<availableOn>100</availableOn>
+		<level>1</level>
+	</building>
+	
+	<building>
+		<id>2</id>
+		<name>Tower B</name>
+		<resources food="0" wood="200" gold="150"></resources>
+		<description>Bla bla bla</description>
+		<availableOn>100</availableOn>
+		<level>2</level>
+	</building>
+</buildings>
