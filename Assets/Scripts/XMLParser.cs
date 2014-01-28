@@ -60,4 +60,60 @@ public class XMLParser
 
 		return entities.ToArray();
 	}
+
+	public static MobileEntityProperties[] ParseCharacters (string content)
+	{
+		XmlReader reader = XmlReader.Create (new StringReader (content));
+		List<MobileEntityProperties> entities = new List<MobileEntityProperties> ();
+		MobileEntityProperties current = null;
+		while (reader.Read()) 
+		{
+			if(reader.IsStartElement("character"))
+			{
+				if(current != null)
+				{
+					entities.Add(current);
+				}
+				current = new MobileEntityProperties();
+			}
+			if(current != null)
+			{
+				if(reader.IsStartElement("id"))
+				{
+					current.Id = reader.ReadElementContentAsInt();
+				}
+				if(reader.IsStartElement("name"))
+				{
+					current.Name = reader.ReadElementContentAsString();
+				}
+				if(reader.IsStartElement("resources"))
+				{
+					int food, wood, gold = 0;
+					food = int.Parse(reader.GetAttribute("food"));
+					gold = int.Parse(reader.GetAttribute("gold"));
+					wood = int.Parse(reader.GetAttribute("wood"));
+					current.NecessaryResources = new ResourceSet(wood, food, gold);
+				}
+				if(reader.IsStartElement("description"))
+				{
+					current.Description = reader.ReadElementContentAsString();
+				}
+				if(reader.IsStartElement("availableOn"))
+				{
+					current.AvailableOn = reader.ReadElementContentAsInt();
+				}
+				if(reader.IsStartElement("level"))
+				{
+					current.Level = reader.ReadElementContentAsInt();
+				}
+			}
+		}
+		
+		if (current != null)
+		{
+			entities.Add(current);
+		}
+		
+		return entities.ToArray();
+	}
 }

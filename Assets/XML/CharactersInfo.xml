@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<characters>
+	<character>
+		<id>1</id>
+		<name>Guto</name>
+		<resources food="1000" wood="0" gold="0"></resources>
+		<description>Programador</description>
+		<availableOn>1</availableOn>
+		<level>1</level>
+	</character>
+	
+	<character>
+		<id>2</id>
+		<name>Guto_2</name>
+		<resources food="1000" wood="100" gold="0"></resources>
+		<description></description>
+		<availableOn>10</availableOn>
+		<level>1</level>
+	</character>
+</characters>
