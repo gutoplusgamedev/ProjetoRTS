@@ -47,8 +47,10 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\BaseUnit.cs" />
+     <Compile Include="Assets\Scripts\BuildingPlacer.cs" />
      <Compile Include="Assets\Scripts\CameraControl.cs" />
      <Compile Include="Assets\Scripts\EntitiesHolder.cs" />
+     <Compile Include="Assets\Scripts\Interfaces\IResourceReceiver.cs" />
      <Compile Include="Assets\Scripts\MobileUnit.cs" />
      <Compile Include="Assets\Scripts\Objects\EntityProperties.cs" />
      <Compile Include="Assets\Scripts\Objects\MobileEntityProperties.cs" />
@@ -56,6 +58,8 @@
      <Compile Include="Assets\Scripts\Objects\StaticEntityProperties.cs" />
      <Compile Include="Assets\Scripts\Objects\UnitProperties.cs" />
      <Compile Include="Assets\Scripts\ResourceRoot.cs" />
+     <Compile Include="Assets\Scripts\StaticUnit.cs" />
+     <Compile Include="Assets\Scripts\StorageBuilding.cs" />
      <Compile Include="Assets\Scripts\UnitController.cs" />
      <Compile Include="Assets\Scripts\XMLParser.cs" />
      <Compile Include="Assets\TestScript.cs" />

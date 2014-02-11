@@ -59,7 +59,11 @@ public class UnitController : MonoBehaviour {
 		
 		if(Input.GetButtonUp("Fire1"))
 		{
-			
+			if(_finalPosition == _initialPosition)
+			{
+				return;
+			}
+
 			foreach(BaseUnit unit in _selectedUnits)
 			{
 				

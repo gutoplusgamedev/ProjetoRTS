@@ -23,7 +23,10 @@ public class MobileUnit: BaseUnit {
 			for(int i = 0; i < entitiesAvailableOnThisUnit.Length; i++)
 			{
 				EntityProperties current = entitiesAvailableOnThisUnit[i];
-				GUI.Box(new Rect(0, 40 * i, 400, 40), current.Name + ", " + current.Description);
+				if(GUI.Button(new Rect(0, 40 * i, 400, 40), current.Name + ", " + current.Description))
+				{
+					BuildingPlacer.Create(current.Id);
+				}
 			}
 		}
 	}
