@@ -6,8 +6,9 @@ public class BaseUnit : MonoBehaviour
 
 	public Projector projector;
 	private bool _isSelected;
-	public UnitProperties properties;
-	
+	//public UnitProperties properties;
+	public int id;
+
 	public bool IsSelected
 	{
 		
@@ -35,8 +36,7 @@ public class BaseUnit : MonoBehaviour
 	
 	internal virtual void Start ()
 	{
-		
-		properties.Initialize();
+			
 		UnitController.AddBaseUnitToList(this);
 		
 	}

@@ -48,6 +48,7 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\BaseUnit.cs" />
      <Compile Include="Assets\Scripts\CameraControl.cs" />
+     <Compile Include="Assets\Scripts\EntitiesHolder.cs" />
      <Compile Include="Assets\Scripts\MobileUnit.cs" />
      <Compile Include="Assets\Scripts\Objects\EntityProperties.cs" />
      <Compile Include="Assets\Scripts\Objects\MobileEntityProperties.cs" />
@@ -60,8 +61,8 @@
      <Compile Include="Assets\TestScript.cs" />
      <None Include="Assets\Standard Assets\Projectors\Sources\Shaders\Projector Light.shader" />
      <None Include="Assets\Standard Assets\Projectors\Sources\Shaders\Projector Multiply.shader" />
-     <None Include="Assets\XML\BuildingsInfo.xml" />
-     <None Include="Assets\XML\CharactersInfo.xml" />
+     <None Include="Assets\Resources\XMLFiles\BuildingsInfo.xml" />
+     <None Include="Assets\Resources\XMLFiles\CharactersInfo.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

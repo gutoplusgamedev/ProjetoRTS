@@ -14,6 +14,19 @@ public class MobileUnit: BaseUnit {
 	void Update () {
 	
 	}
+
+	void OnGUI ()
+	{
+		if (IsSelected) 
+		{
+			EntityProperties[] entitiesAvailableOnThisUnit = EntitiesHolder.LoadEntitiesAvailableOnId(base.id);
+			for(int i = 0; i < entitiesAvailableOnThisUnit.Length; i++)
+			{
+				EntityProperties current = entitiesAvailableOnThisUnit[i];
+				GUI.Box(new Rect(0, 40 * i, 400, 40), current.Name + ", " + current.Description);
+			}
+		}
+	}
 	
 	IEnumerator MoveTo (Vector3[] path)
 	{

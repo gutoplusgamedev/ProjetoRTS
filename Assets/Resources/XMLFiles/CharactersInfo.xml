@@ -5,7 +5,7 @@
 		<name>Guto</name>
 		<resources food="1000" wood="0" gold="0"></resources>
 		<description>Programador</description>
-		<availableOn>1</availableOn>
+		<availableOn>0</availableOn>
 		<level>1</level>
 	</character>
 	
