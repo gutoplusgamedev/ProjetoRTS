@@ -34,6 +34,22 @@ public class BuildingPlacer : MonoBehaviour
 		_building.GetComponent<BoxCollider> ().enabled = false;
 	}
 
+	private static void PlaceBuilding ()
+	{
+		GameObject newBuilding = GameObject.CreatePrimitive (PrimitiveType.Cube);
+		newBuilding.transform.position = _building.transform.position;
+		StaticEntityProperties properties = EntitiesHolder.LoadEntityById (_buildingId) as StaticEntityProperties;
+		print (newBuilding);
+		print (properties.scriptInfo);
+		newBuilding.AddComponent (properties.scriptInfo.script);
+		for (int i = 0; i < properties.scriptInfo.arguments.Length; i++) 
+		{
+			print  (properties.scriptInfo.arguments[i]);
+		}
+		(newBuilding.GetComponent (properties.scriptInfo.script) as BaseUnit).OnCreated (properties.scriptInfo.arguments);
+		DestroyCurrent ();
+	}
+
 	void Update () 
 	{
 		if (IsPlacing) 
@@ -48,6 +64,11 @@ public class BuildingPlacer : MonoBehaviour
 			if(Input.GetKeyUp(KeyCode.Escape))
 			{
 				DestroyCurrent();
+			}
+
+			if(Input.GetButtonDown("Fire1"))
+			{
+				PlaceBuilding();
 			}
 		}
 	}

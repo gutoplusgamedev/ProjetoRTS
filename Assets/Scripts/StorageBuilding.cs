@@ -1,5 +1,5 @@
 ﻿using UnityEngine;
-using System.Collections;
+using System.Collections.Generic;
 
 public class StorageBuilding : StaticUnit, IResourceReceiver 
 {
@@ -27,5 +27,14 @@ public class StorageBuilding : StaticUnit, IResourceReceiver
 		}
 
 		return false;
+	}
+
+	public override void OnCreated (string[] arguments)
+	{
+		_acceptedResources = new ResourceType[arguments.Length];
+		for (int i = 0; i < _acceptedResources.Length; i++)
+		{
+			_acceptedResources[i] = (ResourceType)System.Enum.Parse (typeof(ResourceType), arguments[i]);
+		}
 	}
 }

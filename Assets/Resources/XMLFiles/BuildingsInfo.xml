@@ -2,19 +2,21 @@
 <buildings>
 	<building>
 		<id>0</id>
-		<name>Tower</name>
+		<name>Wood Storage</name>
 		<resources food="0" wood="400" gold="100"></resources>
-		<description>This is a tower.</description>
+		<description>Used as a center to drop wood in.</description>
 		<availableOn>1</availableOn>
 		<level>1</level>
+		<script arg0="Wood">StorageBuilding</script>
 	</building>
 	
 	<building>
 		<id>2</id>
-		<name>Tower B</name>
+		<name>Gold Storage</name>
 		<resources food="0" wood="200" gold="150"></resources>
-		<description>Bla bla bla.</description>
+		<description>Used as a center to drop gold in.</description>
 		<availableOn>1</availableOn>
 		<level>2</level>
+		<script arg0="Gold">StorageBuilding</script>
 	</building>
 </buildings>

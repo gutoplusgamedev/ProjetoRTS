@@ -10,7 +10,7 @@
 	</character>
 	
 	<character>
-		<id>2</id>
+		<id>3</id>
 		<name>Guto_2</name>
 		<resources food="1000" wood="100" gold="0"></resources>
 		<description></description>

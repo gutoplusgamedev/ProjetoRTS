@@ -16,6 +16,27 @@ public class EntitiesHolder : MonoBehaviour
 		_staticProps = XMLParser.ParseBuildings (buildingsInfo.text);
 	}
 
+	public static EntityProperties LoadEntityById (int id)
+	{
+		foreach (MobileEntityProperties m in _mobileProps) 
+		{
+			if(m.Id == id)
+			{
+				return m;
+			}
+		}
+
+		foreach (StaticEntityProperties s in _staticProps) 
+		{
+			if(s.Id == id)
+			{
+				return s;
+			}
+		}
+
+		return null;
+	}
+
 	public static EntityProperties[] LoadEntitiesAvailableOnId (int id)
 	{
 		List<EntityProperties> returnList = new List<EntityProperties> ();
