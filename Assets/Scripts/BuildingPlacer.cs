@@ -39,13 +39,7 @@ public class BuildingPlacer : MonoBehaviour
 		GameObject newBuilding = GameObject.CreatePrimitive (PrimitiveType.Cube);
 		newBuilding.transform.position = _building.transform.position;
 		StaticEntityProperties properties = EntitiesHolder.LoadEntityById (_buildingId) as StaticEntityProperties;
-		print (newBuilding);
-		print (properties.scriptInfo);
-		newBuilding.AddComponent (properties.scriptInfo.script);
-		for (int i = 0; i < properties.scriptInfo.arguments.Length; i++) 
-		{
-			print  (properties.scriptInfo.arguments[i]);
-		}
+		newBuilding.AddComponent(System.Type.GetType(properties.scriptInfo.script)); // alterado devido a atualização Unity 5.x
 		(newBuilding.GetComponent (properties.scriptInfo.script) as BaseUnit).OnCreated (properties.scriptInfo.arguments);
 		DestroyCurrent ();
 	}
